@@ -41,3 +41,10 @@ Mean_tbl_field <- function(X, field1, field2){
   
   
 }
+Expor_txt <- function(X, name){
+    current_project <- "./"
+    file  <-  paste( name , ".txt")
+    write.table(X, file, append = FALSE, sep = " ", dec = ".",
+                row.names = TRUE, col.names = TRUE)
+  
+}
