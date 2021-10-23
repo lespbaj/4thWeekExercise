@@ -9,4 +9,3 @@ Only the mean and standard deviation variables were kept and taking their mean f
 
 you will find more information i the CodeBook.MD and each results represent step by step the desire transformation needed for the final result from the ptoject.
 
-
