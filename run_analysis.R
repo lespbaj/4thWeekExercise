@@ -7,7 +7,6 @@ C_tbl <- function (folder){
     subject  <-  read.delim(file.path(current_project, folder, paste("subject_", folder , ".txt", sep="")),header = FALSE, sep = "")
     names(subject) <- "volunteers"
     names(activity) <- "activity"
-    
     names(x) = vars[,2]
     tbl_a <- cbind(subject, activity , x)
     
@@ -37,9 +36,7 @@ Label_tbl <-  function (tbl_a) {
   Label_Tbl <- inner_join(tbl_a, labels, c("activity" = "ID"))
 }
 Mean_tbl_field <- function(X, field1, field2){
-  
-  ##gb  <-  X[, field]
-  #3gb   <-  as.list(gb)
+
   Mean_tbl_field <- aggregate(select_if(X,is.numeric), list(X[,field1], X[,field2]), FUN=mean)
   
   
